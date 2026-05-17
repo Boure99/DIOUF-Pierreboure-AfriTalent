@@ -1,0 +1,110 @@
+/*AfriTalent - Styles principaux*/
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color:#198754;
+    --dark-bg: #121212;
+    --light-bg: #f8f9fa;
+    
+    --text-dark: #212529;
+    --text-light: #f8f9fa;
+    --text-muted: #6c757d;
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg:20px;
+
+}
+
+[data-theme="dark"] {
+
+    --primary-color: #0d6efd;
+    --secondary-color: #adb5bd;
+    --dark-bg: #1e1e2a;
+    --light-bg: #2a2a35;
+    --text-dark: #e4e4e7;
+    --text-light: #f8f9fa;
+    --text-muted: #a1a1aa;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.3);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    transition: background-color var(--transition-normal), color var(--transition-normal);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+/*Navbar Styles*/
+
+.navbar {
+    background-color: var(--light-bg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    padding: 1rem 0;
+}
+
+.navbar-scrolled {
+    background-color: var(--light-bg);
+    box-shadow: var(--shadow-md);
+    padding: 0.5rem 0;
+}
+
+.navbar-brand {
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-brand span {
+    color: var(--primary-color);
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    transition: color var(--transition-fast);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.dark-mode-toggle:hover {
+    opacity: 0.8;
+    background-color: var(--secondary-color);
+}
+
+
