@@ -3,10 +3,10 @@
 :root {
     --primary-color: #0d6efd;
     --secondary-color: #6c757d;
-    --success-color:#198754;
+    --success-color: #198754;
     --dark-bg: #121212;
     --light-bg: #f8f9fa;
-    
+
     --text-dark: #212529;
     --text-light: #f8f9fa;
     --text-muted: #6c757d;
@@ -17,9 +17,9 @@
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
 
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
@@ -27,7 +27,7 @@
 
     --radius-sm: 8px;
     --radius-md: 12px;
-    --radius-lg:20px;
+    --radius-lg: 20px;
 
 }
 
@@ -40,15 +40,15 @@
     --text-dark: #e4e4e7;
     --text-light: #f8f9fa;
     --text-muted: #a1a1aa;
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
-    --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
-    --shadow-lg: 0 10px 15px rgba(0,0,0,0.3);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
 
 }
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -60,10 +60,45 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
+}
+
+.site-header {
+    padding: 10px 0;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #0d6efd;
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.site-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d6efd;
 }
 
 /*Navbar Styles*/
@@ -116,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     position: relative;
     padding: 100px 0 60px;
-    background: -o-linear-gradient(135deg, var(--light-bg) 0%, rgba(13,110,253,0.1) 100%);
+    background: -o-linear-gradient(135deg, var(--light-bg) 0%, rgba(13, 110, 253, 0.1) 100%);
 }
 
 .hero-title {
@@ -150,12 +185,12 @@ hero-subtitle {
 }
 
 .bento-card {
-   background: var(--light-bg);
-   border-radius: var(--radius-lg);
-   padding: 1.5rem;
-   transition: var(--transition-normal);
-   box-shadow: var(--shadow-sm);
-   border: 1px solid rgba(0,0,0,0.05);
+    background: var(--light-bg);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    transition: var(--transition-normal);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .bento-card:hover {
@@ -182,11 +217,11 @@ hero-subtitle {
 }
 
 .step-number {
-   font-size: 2.5rem;
-   font-weight: 700;
-   color: var(--primary-color);
-   opacity: 0.3;
-   margin-bottom: var(--spacing-sm);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    opacity: 0.3;
+    margin-bottom: var(--spacing-sm);
 }
 
 /*category cards*/
@@ -383,7 +418,7 @@ hero-subtitle {
 
 .form-control:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem rgba(13,110,253,0.25);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
 }
 
 .form-control.error {
@@ -500,7 +535,7 @@ footer a:hover {
     .bento-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
@@ -510,17 +545,17 @@ footer a:hover {
     .bento-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .bento-card:nth-child(2),
     .bento-card:nth-child(3),
     .bento-card:nth-child(4) {
         grid-column: span 1;
     }
-    
+
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .pricing-card.featured {
         transform: scale(1);
     }
@@ -530,7 +565,7 @@ footer a:hover {
     .hero-section {
         text-align: center;
     }
-    
+
     .stat-number {
         font-size: 1.8rem;
     }

@@ -1,236 +1,387 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Freelznces - AfriTalent</title>
-<!-- Bootstrap 5 via CDN : feuille de style -->
-<link
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-rel="stylesheet">
-<!-- Votre feuille de style personnelle -->
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelances - AfriTalent</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-        <a  class="navbar-brand" href="index.html"><i class="bi bi-briefcase-fill">Afri<span>Talent</span></i></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                <li class="nav-item" ><a class="nav-link active" href="freelances.html">Freelances</a></li>
-                <li class="nav-item" ><a class="nav-link" href="tarifs.html">Tarifs</a></li>
-                <li class="nav-item" ><a class="nav-link" href="about.html">A propos</a></li>
-                <li class="nav-item" ><a class="nav-link" href="#">Blog</a></li>
-                <li class="nav-item" ><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-
-            <button class="dark-mode-toggle ms-3" id="darkModeToggle">
-                <i class="bi bi-moon-fill"></i>
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-briefcase-fill"></i> Afri<span>Talent</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="contact.html" class="btn btn-primary ms-3">Rejoindre AfriTalent</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="freelances.html">Freelances</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <button class="dark-mode-toggle ms-3" id="darkModeToggle">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <a href="contact.html" class="btn btn-primary ms-3">Rejoindre AfriTalent</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <main class="mt-5 pt-5">
+        <div class="container my-5">
+            <div class="text-center mb-5">
+                <h1>Nos Freelances</h1>
+                <p class="text-muted">Plus de 2500 experts prêts à collaborer avec vous</p>
+            </div>
+
+            <!-- Filtres -->
+            <div class="filter-bar text-center mb-5">
+                <div class="btn-group flex-wrap">
+                    <button class="btn btn-outline-primary filter-btn active" data-category="all">Tous</button>
+                    <button class="btn btn-outline-primary filter-btn" data-category="web">Développement Web</button>
+                    <button class="btn btn-outline-primary filter-btn" data-category="design">Design UI/UX</button>
+                    <button class="btn btn-outline-primary filter-btn" data-category="marketing">Marketing
+                        Digital</button>
+                    <button class="btn btn-outline-primary filter-btn" data-category="data">Data & IA</button>
+                    <button class="btn btn-outline-primary filter-btn" data-category="devops">DevOps & Cloud</button>
+                </div>
+            </div>
+
+            
+            <div class="row g-4" id="freelanceGrid">
+
+                
+                <div class="col-md-6 col-lg-4 freelance-card" data-category="web">
+                    <div class="card h-100">
+                        <img src="images/Mass Sow.jpg" class="card-img-top freelance-img" alt="Mass Sow">
+                        <div class="card-body">
+                            <h5 class="freelance-name">Mass Sow</h5>
+                            <p class="freelance-specialty">Développeur Full-Stack</p>
+                            <p class="card-text">Expert React, Node.js et MongoDB. 5 ans d'expérience.</p>
+                            <p class="fw-bold">50€/h</p>
+                            <div class="stars mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal"
+                                data-bs-target="#profileModal1">Voir le profil</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-lg-4 freelance-card" data-category="design">
+                    <div class="card h-100">
+                        <img src="images/Rose Pierre.jpg" class="card-img-top freelance-img" alt="Rose Pierre">
+                        <div class="card-body">
+                            <h5 class="freelance-name">Rose Pierre</h5>
+                            <p class="freelance-specialty">UI/UX Designer</p>
+                            <p class="card-text">Spécialiste en design d'applications mobiles et web.</p>
+                            <p class="fw-bold">45€/h</p>
+                            <div class="stars mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal"
+                                data-bs-target="#profileModal2">Voir le profil</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-lg-4 freelance-card" data-category="marketing">
+                    <div class="card h-100">
+                        <img src="images/Cecilia Keny.jpg" class="card-img-top freelance-img" alt="Cecilia Keny">
+                        <div class="card-body">
+                            <h5 class="freelance-name">Cecilia Keny</h5>
+                            <p class="freelance-specialty">Expert Marketing Digital</p>
+                            <p class="card-text">SEO, SEA, réseaux sociaux. +200 campagnes réussies.</p>
+                            <p class="fw-bold">60€/h</p>
+                            <div class="stars mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal"
+                                data-bs-target="#profileModal3">Voir le profil</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-lg-4 freelance-card" data-category="data">
+                    <div class="card h-100">
+                        <img src="images/Assane Bodian.jpg" class="card-img-top freelance-img" alt="Assane Bodian">
+                        <div class="card-body">
+                            <h5 class="freelance-name">Assane Bodian</h5>
+                            <p class="freelance-specialty">Data Scientist</p>
+                            <p class="card-text">Python, Machine Learning, Analyse de données.</p>
+                            <p class="fw-bold">70€/h</p>
+                            <div class="stars mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal"
+                                data-bs-target="#profileModal4">Voir le profil</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-lg-4 freelance-card" data-category="web">
+                    <div class="card h-100">
+                        <img src="images/david koffi.jpg" class="card-img-top freelance-img" alt="David Koffi">
+                        <div class="card-body">
+                            <h5 class="freelance-name">David Koffi</h5>
+                            <p class="freelance-specialty">Développeur Frontend</p>
+                            <p class="card-text">React, Vue.js, Angular. Passionné d'animations CSS.</p>
+                            <p class="fw-bold">40€/h</p>
+                            <div class="stars mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal"
+                                data-bs-target="#profileModal5">Voir le profil</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-lg-4 freelance-card" data-category="devops">
+                    <div class="card h-100">
+                        <img src="images/Mustapha Diop.jpg" class="card-img-top freelance-img" alt="Mustapha Diop">
+                        <div class="card-body">
+                            <h5 class="freelance-name">Mustapha Diop</h5>
+                            <p class="freelance-specialty">DevOps Engineer</p>
+                            <p class="card-text">AWS, Docker, Kubernetes, CI/CD.</p>
+                            <p class="fw-bold">75€/h</p>
+                            <div class="stars mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal"
+                                data-bs-target="#profileModal6">Voir le profil</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+   
+   
+    <div class="modal fade" id="profileModal1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mass Sow</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/Mass Sow.jpg" class="img-fluid rounded mb-3" alt="Mass Sow">
+                    <p><strong>Développeur Full-Stack</strong> avec 5 ans d'expérience.</p>
+                    <p>Compétences : React, Node.js, Python, MongoDB</p>
+                    <p>Disponible immédiatement pour des missions à distance.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Contacter</button>
+                </div>
+            </div>
         </div>
     </div>
 
-</nav>
-<main class="mt-5 pt-5">
-    <div class="container my-5">
-        <div class="text-center mb-5">
-            <h1>Nos Freelances</h1>
-            <p class="text-muted">Plus de 2500 experts prêts à collaborer avec vous</p>
-        </div>
-
-
-        <div class="filter-bar text-center mb-5">
-            <div class="btn-group flex-wrap">
-                <button class="btn btn-outline-primary filter-btn active" data-category="all">Tous</button>
-                <button class="btn btn-outline-primary filter-btn active" data-category="Web">Développement Web</button>
-                <button class="btn btn-outline-primary filter-btn active" data-category="design">Design UI/UX</button>
-                <button class="btn btn-outline-primary filter-btn active" data-category="marketing">Marketing Digital</button>
-                <button class="btn btn-outline-primary filter-btn active" data-category="data">Data & IA</button>
-                <button class="btn btn-outline-primary filter-btn active" data-category="devops">DevOps & Cloud</button>
-            </div>
-        </div>
-
-
-        <div class="row g-4" id="freelanceGrid">
-
-            <div class="col-md-6 col-lg-4 freelance-card" data-category="web">
-                <div class="card h-100">
-                    <img src="images/Mass Sow.jpg" class="card-img-top freelance-img" alt="Mass Sow">
-                    <div class="card-body">
-                        <h5 class="freelance-name">Mass Sow</h5>
-                        <p class="freelance-specialty">Développeur Full-Stack</p>
-                        <p class="card-text">Expert React, Node.js et MongoDB. 5ans d'expérience</p>
-                        <p class="fw-bold">50£/h</p>
-                        <div class="stars mb-2">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-half text-warning"></i>
-                        </div>
-                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#profilModal1">Voir le profil</button>
-                    </div>
+    
+    <div class="modal fade" id="profileModal2" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Rose Pierre</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-            </div>
-
-
-            <div class="col-md-6 col-lg-4 freelance-card" data-category="design">
-                <div class="card h-100">
-                    <img src="images/Rose Pierre.jpg" class="card-img-top freelance-card" alt="Rose Pierre">
-                    <div class="card-body">
-                        <h5 class="freelance-name">Rose Pierre</h5>
-                        <p class="freelance-specialty">UI/UX Designer</p>
-                        <p class="card-text">Spécialiste en design d'applications mobiles et web.</p>
-                        <p class="fw-bold">45£/h</p>
-                        <div class="stars mb-2">
-                             <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                        </div>
-                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#profilModal2">Voir le profil</button>
-
-                    </div>
+                <div class="modal-body">
+                    <img src="images/Rose Pierre.jpg" class="img-fluid rounded mb-3" alt="Rose Pierre">
+                    <p><strong>UI/UX Designer</strong> avec 4 ans d'expérience.</p>
+                    <p>Compétences : Figma, Adobe XD, Sketch, Prototypage</p>
+                    <p>Disponible immédiatement pour des missions à distance.</p>
                 </div>
-            </div>
-
-              <div class="col-md-6 col-lg-4 freelance-card" data-category="marketing">
-                <div class="card h-100">
-                    <img src="images/Cecilia Keny.jpg" class="card-img-top freelance-img" alt="Cecilia Keny">
-                    <div class="card-body">
-                        <h5 class="freelance-name">Cecilia Keny</h5>
-                        <p class="freelance-specialty">Expert Marketing Digital</p>
-                        <p class="card-text">SEO, SEA, réseaux sociaux. +200 campagnes réussies</p>
-                        <p class="fw-bold">60£/h</p>
-                        <div class="stars mb-2">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star text-warning"></i>
-                        </div>
-                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#profilModal3">Voir le profil</button>
-                    </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Contacter</button>
                 </div>
-            </div>
-
-              <div class="col-md-6 col-lg-4 freelance-card" data-category="data">
-                <div class="card h-100">
-                    <img src="images/Assane Bodian.jpg" class="card-img-top freelance-img" alt="Assane Bodian">
-                    <div class="card-body">
-                        <h5 class="freelance-name">Assane Bodian</h5>
-                        <p class="freelance-specialty">Data Scientist</p>
-                        <p class="card-text">Python, Marchine Learning, Analyse de données.</p>
-                        <p class="fw-bold">70£/h</p>
-                        <div class="stars mb-2">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-half text-warning"></i>
-                        </div>
-                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#profilModal4">Voir le profil</button>
-                    </div>
-                </div>
-            </div>
-
-              <div class="col-md-6 col-lg-4 freelance-card" data-category="web">
-                <div class="card h-100">
-                    <img src="images/david koffi.jpg" class="card-img-top freelance-img" alt="David Koffi">
-                    <div class="card-body">
-                        <h5 class="freelance-name">David Koffi</h5>
-                        <p class="freelance-specialty">Développeur Frontend</p>
-                        <p class="card-text">React, Vue.js, Angular. Passionné d'animations CSS.</p>
-                        <p class="fw-bold">40£/h</p>
-                        <div class="stars mb-2">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star text-warning"></i>
-                            <i class="bi bi-star text-warning"></i>
-                        </div>
-                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#profilModal5">Voir le profil</button>
-                    </div>
-                </div>
-            </div>
-
-              <div class="col-md-6 col-lg-4 freelance-card" data-category="devops">
-                <div class="card h-100">
-                    <img src="images/Mustapha Diop.jpg" class="card-img-top freelance-img" alt="Mustapha Diop">
-                    <div class="card-body">
-                        <h5 class="freelance-name">Mustapha Diop</h5>
-                        <p class="freelance-specialty">deveOps Engineer</p>
-                        <p class="card-text">AWS, Docker, Kubernetes, CI/CD</p>
-                        <p class="fw-bold">75£/h</p>
-                        <div class="stars mb-2">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                        </div>
-                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#profilModal6">Voir le profil</button>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-</main>
-
-
-<div class="modal fade" id="profileModal1" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Mass Mendy</h5>
-                <button type="button" class="btn-close" data-bs-dimiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <img src="" class="img-fluid rounded mb-3" alt="Mass">
-                <p><strong>Développeur Full-Strack</strong>avec 5ans d'expérience.</p>
-                <p>Conpétences : React, Node.js, Python, MongoDB</p>
-                <p>Disponible immédiatement pour des missions à distance.</p>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary">Contacter</button>
             </div>
         </div>
     </div>
-</div>
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 mb-4"><h5><i class="bi bi-briefcase-fill"></i> AfriTalent</h5><p>La première plateforme de mise en relation entre entreprises et freelances africains.</p></div>
-
-            <div class="col-md-3 mb-4"><h5>Liens utiles</h5><ul class="list-unstyled"><li><a href="index.html">Accueil</a></li><li><a href="freelances.html">Freelances</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="about.html">A propos</a></li></ul></div>
-
-            <div class="col-md-3 mb-4"><h5>Ressources</h5><ul class="list-unstyled"><li><a href="#Blog"></a></li><li><a href="#">FAQ</a></li><li><a href="#">Centre d'aide</a></li></ul></div>
-
-            <div class="col-md-3 mb-4"><h5>Contact</h5><ul class="list-unstyled"><li><i class="bi bi-envelope"></i> contact@afritalent.com</li><li><i class="bi bi-telephone"></i> +221 33 827 27 27</li></ul></div>
-
+    
+    <div class="modal fade" id="profileModal3" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cecilia Keny</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/Cecilia Keny.jpg" class="img-fluid rounded mb-3" alt="Cecilia Keny">
+                    <p><strong>Expert Marketing Digital</strong> avec 6 ans d'expérience.</p>
+                    <p>Compétences : SEO, SEA, Google Analytics, Réseaux sociaux</p>
+                    <p>Disponible immédiatement pour des missions à distance.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Contacter</button>
+                </div>
+            </div>
         </div>
-
-        <hr><div class="text-center"><p>&copy ; <span id="currentYear"></span> AfriTalent</p></div>
     </div>
-</footer>
 
-<button id="backTotop" class="back-to-top"><i class="bi bi-cloud-arrow-up"></i></button>
+    
+    <div class="modal fade" id="profileModal4" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Assane Bodian</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/Assane Bodian.jpg" class="img-fluid rounded mb-3" alt="Assane Bodian">
+                    <p><strong>Data Scientist</strong> avec 4 ans d'expérience.</p>
+                    <p>Compétences : Python, Machine Learning, SQL, TensorFlow</p>
+                    <p>Disponible immédiatement pour des missions à distance.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Contacter</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!-- Bootstrap 5 via CDN : script JavaScript -->
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script>
-<!-- Votre script JavaScript -->
-<script src="js/main.js"></script>
+    
+    <div class="modal fade" id="profileModal5" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">David Koffi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/david koffi.jpg" class="img-fluid rounded mb-3" alt="David Koffi">
+                    <p><strong>Développeur Frontend</strong> avec 3 ans d'expérience.</p>
+                    <p>Compétences : React, Vue.js, Angular, CSS avancé</p>
+                    <p>Disponible immédiatement pour des missions à distance.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Contacter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="profileModal6" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mustapha Diop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/Mustapha Diop.jpg" class="img-fluid rounded mb-3" alt="Mustapha Diop">
+                    <p><strong>DevOps Engineer</strong> avec 5 ans d'expérience.</p>
+                    <p>Compétences : AWS, Docker, Kubernetes, CI/CD, Terraform</p>
+                    <p>Disponible immédiatement pour des missions à distance.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Contacter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5><i class="bi bi-briefcase-fill"></i> AfriTalent</h5>
+                    <p>La première plateforme de mise en relation entre entreprises et freelances africains.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Liens utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="freelances.html">Freelances</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Ressources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Centre d'aide</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope"></i> contact@afritalent.com</li>
+                        <li><i class="bi bi-telephone"></i> +221 33 827 27 27</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; <span id="currentYear"></span> AfriTalent</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <button id="backToTop" class="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>

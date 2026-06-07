@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - AfriTalent</title>
 
-<link
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-rel="stylesheet">
-<!-- Votre feuille de style personnelle -->
-<link rel="stylesheet" href="css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - AfriTalent</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-     <nav class="navbar navbar-expand-lg fixed-top">
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html"><i class="bi bi-briefcase-fill"></i> Afri<span>Talent</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -24,7 +30,7 @@ rel="stylesheet">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
                     <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
                     <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                 </ul>
@@ -34,24 +40,27 @@ rel="stylesheet">
         </div>
     </nav>
 
+    
     <main class="mt-5 pt-5">
         <div class="container my-5">
             <div class="row">
+                
+                
                 <div class="col-lg-6">
                     <div class="contact-form">
                         <h2 class="mb-4">Contactez-nous</h2>
-                        <form id="contactform">
+                        <form id="contactForm">
                             <div class="mb-3">
                                 <label for="nom" class="form-label">Nom *</label>
                                 <input type="text" class="form-control" id="nom" placeholder="Votre nom">
                                 <div class="error-message" id="nomError">Le nom est requis</div>
                             </div>
-                             <div class="mb-3">
+                            <div class="mb-3">
                                 <label for="prenom" class="form-label">Prénom *</label>
                                 <input type="text" class="form-control" id="prenom" placeholder="Votre prénom">
                                 <div class="error-message" id="prenomError">Le prénom est requis</div>
                             </div>
-                             <div class="mb-3">
+                            <div class="mb-3">
                                 <label for="email" class="form-label">Email *</label>
                                 <input type="email" class="form-control" id="email" placeholder="exemple@email.com">
                                 <div class="error-message" id="emailError">Email valide requis</div>
@@ -60,73 +69,102 @@ rel="stylesheet">
                                 <label for="sujet" class="form-label">Sujet *</label>
                                 <select class="form-select" id="sujet">
                                     <option value="">Choisissez un sujet</option>
-                                    <option value="info">demande d'information</option>
-                                    <option value="freelance">devenir freelance</option>
-                                    <option value="Entreprise">Recruter un freelance</option>
+                                    <option value="info">Demande d'information</option>
+                                    <option value="freelance">Devenir freelance</option>
+                                    <option value="entreprise">Recruter un freelance</option>
                                     <option value="support">Support technique</option>
                                 </select>
-                                <div class="error-message" id="sujetError">Veuillez selectionner un sujet</div>
+                                <div class="error-message" id="sujetError">Veuillez sélectionner un sujet</div>
                             </div>
                             <div class="mb-3">
-                                <label for="error-message" class="form-label">Message *</label>
-                                <textarea class="form-control" id="Message" rows="5" placeholder="Votre message (minimum 20 caractères)"></textarea>
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Votre message (minimum 20 caractères)"></textarea>
                                 <div class="error-message" id="messageError">Le message doit contenir au moins 20 caractères</div>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Envoyer</button>
-                            <div class="succes-message mt-3" id="succesMessage">
+                            <div class="success-message mt-3" id="successMessage">
                                 <i class="bi bi-check-circle-fill"></i> Message envoyé avec succès ! Nous vous répondrons rapidement.
                             </div>
-                            
                         </form>
                     </div>
                 </div>
+
+                
                 <div class="col-lg-6">
                     <div class="contact-info p-4">
                         <h3>Informations de contact</h3>
-                        <p><i class="bi bi-geo-alt-fill text-primary"></i><strong>Adresse :</strong> Immeuble Talents, 123 Avenue Cheikh Anta Diop, Dakar, Sénégal</p>
-                        <p><i class="bi bi-telephone-fill text-primary"></i><strong>Téléphone :</strong> +221 33 827 27 27</p>
-                        <p><i bi bi-envelope-fill text-primary></i><strong>Email :</strong> contact@afritalent.com</p>
-                        <p><i class="bi bi-clock-fill text-primary"></i><strong>Horaires :</strong> lundi - Vendredi, 9h - 18h</p>
+                        <p><i class="bi bi-geo-alt-fill text-primary"></i> <strong>Adresse :</strong> Immeuble Talents, 123 Avenue Cheikh Anta Diop, Dakar, Sénégal</p>
+                        <p><i class="bi bi-telephone-fill text-primary"></i> <strong>Téléphone :</strong> +221 33 827 27 27</p>
+                        <p><i class="bi bi-envelope-fill text-primary"></i> <strong>Email :</strong> contact@afritalent.com</p>
+                        <p><i class="bi bi-clock-fill text-primary"></i> <strong>Horaires :</strong> Lundi - Vendredi, 9h - 18h</p>
 
+                        <!-- Google Maps -->
                         <div class="mt-4">
-                            <iframe src="images/cartographie.png" 
-                            width="100" 
-                            height="250" 
-                            style="border:0; border-radius: 12px;"
-                            allowfullscreen=""
-                            loading="lazy">
-                                
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123456!2d-17.456789!3d14.6937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQxJzM3LjMiTiAxN8KwMjcnMjQuNCJX!5e0!3m2!1sfr!2ssn!4v1641234567890!5m2!1sfr!2ssn" 
+                                width="100%" 
+                                height="250" 
+                                style="border:0; border-radius: 12px;" 
+                                allowfullscreen="" 
+                                loading="lazy">
                             </iframe>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </main>
 
-     <footer>
-        
+    
+    <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-3 mb-4"><h5><i class="bi bi-briefcase-fill"></i> AfriTalent</h5><p>La première plateforme de mise en relation entre entreprises et freelances africains.</p></div>
-
-                <div class="col-md-3 mb-4"><h5>liens utiles</h5><ul class="list-unstyled"><li><a href="index.html">Accueil</a></li><li><a href="freelances.html">Freelances</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="about.html">A propos</a></li></ul></div>
-
-                <div class="col-md-3 mb-4"><h5>Ressources</h5><ul class="list-unstyled"><li><a href="#">Blog</a></li><li><a href="#">FAQ</a></li><li><a href="#">Centre d'aide</a></li></ul></div>
-
-                <div class="col-md-3 mb-4"><h5>Contact</h5><ul class="list-unstyled"><li><i class="bi bi-envelope"></i> contact@afritalent.com</li><li><i class="bi bi-telephone"></i> +221 33 827 27 27</li></ul></div>
-
+                <div class="col-md-3 mb-4">
+                    <h5><i class="bi bi-briefcase-fill"></i> AfriTalent</h5>
+                    <p>La première plateforme de mise en relation entre entreprises et freelances africains.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Liens utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="freelances.html">Freelances</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Ressources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Centre d'aide</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope"></i> contact@afritalent.com</li>
+                        <li><i class="bi bi-telephone"></i> +221 33 827 27 27</li>
+                    </ul>
+                </div>
             </div>
-            <hr><div class="text-center"> <p>&copy ; <span id="currentYear"></span> AfriTalent</p></div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; <span id="currentYear"></span> AfriTalent. Tous droits réservés</p>
+            </div>
         </div>
     </footer>
 
+    
+    <button id="backToTop" class="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
-
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script>
-<!-- Votre script JavaScript -->
-<script src="js/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
